@@ -77,7 +77,7 @@ def train_model(model,
 
     # End the timer and print out how long it took
     end_time = timer()
-    execution_time = end_time - start_tim
+    execution_time = end_time - start_time
     print(f"[INFO] Total training time: {execution_time:.3f} seconds")
 
     # Save the model
