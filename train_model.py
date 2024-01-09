@@ -9,7 +9,7 @@ from timeit import default_timer as timer
 try:
     from pytorch_functions import data_setup, engine
 except ImportError:
-    !git clone https://github.com/Andresmup/pytorch_functions
+    os.system("git clone https://github.com/Andresmup/pytorch_functions")
     from pytorch_functions import data_setup, engine, utils
 
 
