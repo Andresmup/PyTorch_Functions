@@ -9,7 +9,7 @@ except ImportError:
     # Get the pytorch_functions scripts
     print("[INFO] Downloading.")
     !git clone https://github.com/Andresmup/pytorch_functions
-    from pytorch_functions import data_setup, engine, utils, make_predictions, tinyvgg_model_builder, train_tinyvgg
+    from pytorch_functions import data_setup, engine, utils, make_predictions, plot_loss_curves, train_tinyvgg
 ```
 
 🐍 Puedes ejecutarlas desde la linea de comandos pasando los parametros 🐍
