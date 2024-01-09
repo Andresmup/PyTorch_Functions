@@ -1,9 +1,11 @@
-
+#Libraries
 import torch
 from torchvision import transforms
 from PIL import Image
 import matplotlib.pyplot as plt
 from typing import List, Tuple
+# Setup target device
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 1. Function
 def pred_and_plot_image(model: torch.nn.Module,
