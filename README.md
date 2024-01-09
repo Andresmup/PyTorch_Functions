@@ -9,12 +9,12 @@ except ImportError:
     # Get the pytorch_functions scripts
     print("[INFO] Downloading.")
     !git clone https://github.com/Andresmup/pytorch_functions
-    from pytorch_functions import data_setup, engine, utils, make_predictions, plot_loss_curves, train_tinyvgg
+    from pytorch_functions import data_setup, engine, utils, make_predictions
 ```
 
 🐍 Puedes ejecutarlas desde la linea de comandos pasando los parametros 🐍
 ```
-!python going_modular/train_tinyvgg.py --model model --batch_size 32 --lr 0.001 --num_epochs 5 --name_saving modelo_guardado
+!python pytorch_functions/train_tinyvgg.py --model model --batch_size 32 --lr 0.001 --num_epochs 5 --name_saving modelo_guardado
 ```
 
 ✅ Si estas interesado en conocer el uso que le doy a estas funciones, necesitas ayuda, no dudes contactarme y/o visitar mis otros repositorios. 
