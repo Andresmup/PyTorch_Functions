@@ -7,7 +7,7 @@ from torchvision.transforms import v2
 from timeit import default_timer as timer
 
 try:
-    from pytorch_functions import data_setup, engine
+    from pytorch_functions import data_setup, engine, utils
 except ImportError:
     os.system("git clone https://github.com/Andresmup/pytorch_functions")
     from pytorch_functions import data_setup, engine, utils
