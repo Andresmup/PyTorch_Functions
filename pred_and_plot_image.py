@@ -12,7 +12,7 @@ def pred_and_plot_image(model: torch.nn.Module,
                         image_path: str,
                         class_names: List[str],
                         image_size: Tuple[int, int] = (224, 224),
-                        transform: torchvision.transforms = None,
+                        transform: transforms = None,
                         device: torch.device=device):
     """
     Predicts the class label and plots an image with the predicted label and probability.
