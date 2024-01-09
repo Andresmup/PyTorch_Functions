@@ -1,3 +1,4 @@
+import torch
 # Setup target device
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
