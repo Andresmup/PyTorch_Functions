@@ -1,4 +1,3 @@
-
 import os
 import torch
 from torch.utils.data import DataLoader
@@ -86,3 +85,4 @@ def train_model(model,
         target_dir="models",
         model_name=model_save_name
     )
+    return results
