@@ -1,3 +1,6 @@
+# Setup target device
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 def make_predictions(model: torch.nn.Module, data: list, device: torch.device = device):
 
   '''
