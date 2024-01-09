@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 
 def plot_loss_curves(results):
   """Plots training curves of a results dictionary.
