@@ -49,7 +49,8 @@ def train_model_sam(model,
     loss_fn = torch.nn.CrossEntropyLoss()
     
     # Create base optimizer
-    base_optimizer_instance = base_optimizer(model.parameters(), lr=lr, momentum=momentum)
+    base_optimizer_instance = base_optimizer(model.parameters(), lr=lr, betas=(momentum, 0.999))  # Adjusted betas
+
 
     # Create SAM optimizer
     optimizer = SAM(model.parameters(), base_optimizer_instance)
