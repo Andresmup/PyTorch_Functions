@@ -59,7 +59,7 @@ def train_model_sam(model,
     start_time = timer()
 
     # Train model with SAM
-    results = engine.train_sam(
+    results = engine_sam.train_sam(
         model=model,
         train_dataloader=train_dataloader,
         test_dataloader=test_dataloader,
