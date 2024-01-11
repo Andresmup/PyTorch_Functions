@@ -6,7 +6,8 @@ from timeit import default_timer as timer
 try:
   from sam import SAM
 except ImportError:
-    !pip install sam-pytorch
+    import subprocess
+    subprocess.run(['pip', 'install', 'sam-pytorch'])
     from sam import SAM
 
 try:
