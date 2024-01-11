@@ -11,10 +11,10 @@ except ImportError:
     from sam import SAM
 
 try:
-    from pytorch_functions import engine, utils
+    from pytorch_functions import engine_sam, utils
 except ImportError:
     os.system("git clone https://github.com/Andresmup/pytorch_functions")
-    from pytorch_functions import engine, utils
+    from pytorch_functions import engine_sam, utils
 
 
 def train_model_sam(model,
