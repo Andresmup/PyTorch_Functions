@@ -16,7 +16,6 @@ def train_model(model,
                 model_save_name, 
                 optimizer=None,
                 NUM_EPOCHS=5, 
-                BATCH_SIZE=32, 
                 LEARNING_RATE=0.001):
     """
     Trains a PyTorch image classification model.
@@ -28,7 +27,6 @@ def train_model(model,
         model_save_name: Name to save the trained model.
         optimizer: PyTorch optimizer (optional, default is None).
         NUM_EPOCHS: Number of training epochs (default is 5).
-        BATCH_SIZE: Batch size for DataLoader (default is 32).
         LEARNING_RATE: Learning rate for the optimizer (default is 0.001).
     """
     # Set random seeds
