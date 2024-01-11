@@ -47,10 +47,12 @@ def train_model_sam(model,
 
     # Set loss function
     loss_fn = torch.nn.CrossEntropyLoss()
+    
+    # Create base optimizer
+    base_optimizer_instance = base_optimizer(model.parameters(), lr=lr, momentum=momentum)
 
     # Create SAM optimizer
-    base_optimizer = base_optimizer
-    optimizer = SAM(model.parameters(), base_optimizer, lr=lr, momentum=momentum)
+    optimizer = SAM(model.parameters(), base_optimizer_instance)
 
     # Start the timer
     start_time = timer()
