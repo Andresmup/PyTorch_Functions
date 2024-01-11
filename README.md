@@ -4,7 +4,7 @@
 
 ```python
 try:
-    from pytorch_functions import data_setup, engine
+    from pytorch_functions import data_setup, engine, utils, make_predictions
 except ImportError:
     # Get the pytorch_functions scripts
     print("[INFO] Downloading.")
