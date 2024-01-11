@@ -1,4 +1,4 @@
-import os
+gineimport os
 import torch
 from torch.utils.data import DataLoader
 from timeit import default_timer as timer
@@ -59,7 +59,7 @@ def train_model_sam(model,
     start_time = timer()
 
     # Train model with SAM
-    results = train_sam(
+    results = engine.train_sam(
         model=model,
         train_dataloader=train_dataloader,
         test_dataloader=test_dataloader,
