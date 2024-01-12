@@ -89,6 +89,7 @@ def train_step_sam(model,
 def test_step_sam(model,
                   dataloader,
                   loss_fn,
+                  optimizer,  # Necesitamos el optimizador para el segundo paso
                   device):
     # Put model in eval mode
     model.eval()
@@ -107,7 +108,7 @@ def test_step_sam(model,
 
         # Second forward-backward pass
         loss_fn(model(X), y).backward()
-        optimizer.second_step(zero_grad=True)
+        optimizer.second_step(zero_grad=True)  # Utilizar el segundo paso para la optimización
 
         # Calculate and accumulate accuracy
         test_pred_labels = torch.argmax(torch.softmax(model(X), dim=1), dim=1)
