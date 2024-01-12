@@ -1,9 +1,8 @@
 import os
 import torch
 from torch.utils.data import DataLoader
+import torch.optim as optim
 from timeit import default_timer as timer
-
-
 
 try:
   from sam import SAM
