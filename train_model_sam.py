@@ -47,12 +47,9 @@ def train_model_sam(model,
 
     # Set loss function
     loss_fn = torch.nn.CrossEntropyLoss()
-    
-    # Create base optimizer class
-    base_optimizer_class = optim.Adam
 
     # Create base optimizer instance (without calling it)
-    base_optimizer_instance = base_optimizer_class(model.parameters(), lr=lr, betas=(momentum, 0.999))  # Adjusted betas
+    base_optimizer_instance = optim.Adam(model.parameters(), lr=lr, betas=(momentum, 0.999))  # Adjusted betas
 
     # Create SAM optimizer
     optimizer = SAM(model.parameters(), base_optimizer_instance)
