@@ -3,11 +3,12 @@ import torch
 from torch.utils.data import DataLoader
 from timeit import default_timer as timer
 
+
+
 try:
   from sam import SAM
 except ImportError:
-    import subprocess
-    subprocess.run(['pip', 'install', 'sam-pytorch'])
+    os.system("git clone https://github.com/davda54/sam/tree/main")
     from sam import SAM
 
 try:
