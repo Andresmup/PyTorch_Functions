@@ -8,7 +8,7 @@ from timeit import default_timer as timer
 try:
   from sam import SAM
 except ImportError:
-    os.system("git clone https://github.com/davda54/sam/tree/main")
+    os.system("git clone https://github.com/davda54/sam")
     from sam import SAM
 
 try:
