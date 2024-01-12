@@ -9,7 +9,7 @@ try:
   from sam import SAM
 except ImportError:
     os.system("git clone https://github.com/davda54/sam")
-    from .sam import SAM
+    from sam import sam
 
 try:
     from pytorch_functions import engine_sam, utils
