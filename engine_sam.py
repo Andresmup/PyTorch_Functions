@@ -32,6 +32,7 @@ def train_sam(model,
         test_loss, test_acc = test_step_sam(model=model,
                                             dataloader=test_dataloader,
                                             loss_fn=loss_fn,
+                                            optimizer=optimizer,
                                             device=device)
 
         # Print out what's happening
