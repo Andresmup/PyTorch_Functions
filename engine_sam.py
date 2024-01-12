@@ -77,6 +77,9 @@ def train_step_sam(model,
         loss_fn(model(X), y).backward()
         optimizer.second_step(zero_grad=True)
 
+        # Calculate and accumulate loss metric across all batches
+        train_loss += loss.item()
+
         # Calculate and accumulate accuracy metric across all batches
         y_pred_class = torch.argmax(torch.softmax(model(X), dim=1), dim=1)
         train_acc += (y_pred_class == y).sum().item() / len(y_pred_class)
