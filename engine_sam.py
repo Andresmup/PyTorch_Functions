@@ -72,11 +72,17 @@ def train_step_sam(model,
         # First forward-backward pass
         loss = loss_fn(model(X), y)
         loss.backward()
-        optimizer.first_step(zero_grad=True)
 
+        print("Gradients before first step:", [p.grad for p in model.parameters()])
+        optimizer.first_step(zero_grad=True)        
+        print("Gradients after first step:", [p.grad for p in model.parameters()])
+      
         # Second forward-backward pass
         loss_fn(model(X), y).backward()
         optimizer.second_step(zero_grad=True)
+
+
+        
 
         # Calculate and accumulate loss metric across all batches
         train_loss += loss.item()
