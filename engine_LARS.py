@@ -10,7 +10,7 @@ def train_step(model: torch.nn.Module,
                loss_fn: torch.nn.Module,
                optimizer: torch.optim.Optimizer,
                scheduler=None,
-               device: torch.device) -> Tuple[float, float]:
+               device: torch.device):
 
     # Put model in train mode
     model.train()
